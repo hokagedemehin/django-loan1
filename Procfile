@@ -1,1 +1,1 @@
-web: gunicorn django-loan.wsgi --log-file -
+web: gunicorn DjangoLoan.wsgi --log-file -
