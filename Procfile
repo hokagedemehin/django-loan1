@@ -1,0 +1,1 @@
+web: gunicorn django-loan.wsgi --log-file -

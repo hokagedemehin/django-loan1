@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" method="POST" class=" col-sm col-lg-3 container">
+        {%csrf_token%}
+        {% load crispy_forms_tags %}
+        {{form|crispy}}
+        <button type="submit">Submit</button>
+    </form> -->
+    <div class="row" style="background-color: khaki;">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 ml-2 mt-2 mb-1">
+        <div class="card card-body">
+        <legend>Application Status</legend>
+        <hr>
+        {% if messages %}
+    <ul class='messages'>
+        {% for message in messages %}
+        <li {% if message.tags %} class= "{{message.tags}}" {% endif %} >
+            {{message}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+      </div>
+      </div>
+    </div>
+    
+
+        <div class="row" style="background-color: aquamarine;">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 ml-3 mt-3 mb-3">
+              <div class="card card-body">
+                  <form action="" method="POST">
+                      <legend>Loan Application</legend>
+                      <hr>
+                      {% csrf_token %}
+                      {%load crispy_forms_tags%}
+                      {{form | crispy}}
+                      <button type="submit" name="Submit" id="" class="btn btn-primary" >Submit</button>
+                      <!-- <button type="submit" class="">Submit</button> -->
+                      <!-- <input type="submit" value="Submit" name="Submit"> -->
+                  </form>
+              </div>
+          </div>
+      </div>
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
